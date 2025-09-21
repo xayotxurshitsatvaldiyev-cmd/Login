@@ -16,7 +16,6 @@ btn.addEventListener("click", function() {
   output2.innerHTML = ""
   
   fetch('inf.json')
-  fetch('inf2.json')
   .then(response => response.json())
   .then(data => {
     var input = document.getElementById("login").value.trim()
