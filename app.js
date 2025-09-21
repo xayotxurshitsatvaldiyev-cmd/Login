@@ -1,6 +1,20 @@
 var btn = document.getElementById("button")
+var inpt = document.getElementById("login")
+var prl = document.getElementById("parol")
+var output2 = document.getElementById("output")
+
+inpt.addEventListener("input", function() {
+  output2.innerHTML = ""
+})
+
+prl.addEventListener("input", function() {
+  output2.innerHTML = ""
+})
 
 btn.addEventListener("click", function() {
+  
+  output2.innerHTML = ""
+  
   fetch('inf.json')
   .then(response => response.json())
   .then(data => {
@@ -9,6 +23,18 @@ btn.addEventListener("click", function() {
     
     if(input === data.login && parol === data.password) {
       alert("Xush kelibsiz")
+    }else if(input === "" || parol === "") {
+      if(input === "") {
+        var p = document.createElement("p")
+        p.style.color = "red"
+        p.textContent = "Login ni kiriting"
+        document.getElementById("output").appendChild(p)
+      } else if(parol === "") {
+        var p = document.createElement("p")
+        p.style.color = "red"
+        p.textContent = "parol ni kiriting"
+        document.getElementById("output").appendChild(p)
+      }
     } else {
       alert("Login yoki parol xato")
     }
