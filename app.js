@@ -23,6 +23,7 @@ btn.addEventListener("click", function() {
     
     if(input === data.login && parol === data.password) {
       alert("Xush kelibsiz")
+      window.location.href = "https://scoote.vercel.app/"
     }else if(input === "" || parol === "") {
       if(input === "") {
         var p = document.createElement("p")
