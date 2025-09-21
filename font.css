@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "yangi yil";
+  src: url("./fonts/FascinateInline-Regular.ttf");
+  font-weight: 400;
+}
+
+body {
+  height: 100vh;
+}
+
+.h2 {
+  font-family: "yangi yil";
+}
+
+.bgcha {
+  background-color: #f3f3f3;
+  transition: all 0.5s ease;
+}
+
+.bgcha:hover {
+  box-shadow: 2px 2px 5px 0 black;
+}
